@@ -1,0 +1,3 @@
+https://example.com/
+https://example.com/legal/privacy.html
+https://example.com/legal/terms.html

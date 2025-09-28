@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Psic Psiquiatría Online</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-analytics-endpoint="" data-stripe-enabled="true" data-paypal-enabled="false">
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">Psychiatry Care</div>
+      <nav class="main-nav">
+        <a href="#services" data-i18n="menu.services">Servicios</a>
+        <a href="#fees" data-i18n="menu.honorarios">Honorarios</a>
+        <a href="#contact" data-i18n="menu.contacto">Contacto</a>
+      </nav>
+      <div class="lang-selector">
+        <button type="button" class="lang-btn" data-lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 data-i18n="hero.title">Consultas de psiquiatría online</h1>
+          <p data-i18n="hero.subtitle">Atención personalizada con psiquiatras certificados para acompañarte en cada etapa.</p>
+          <div class="hero-actions">
+            <button id="hero-cta" class="primary-btn" data-i18n="hero.cta">Agendar consulta</button>
+            <a id="hero-whatsapp" class="secondary-btn" href="#contact" data-i18n="hero.secondaryCta">Escribir por WhatsApp</a>
+          </div>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1527137342181-19aab11a8ee8?auto=format&fit=crop&w=900&q=80" alt="Consulta en línea" />
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2 data-i18n="services.title">Profesionales disponibles</h2>
+        <p data-i18n="services.description">Selecciona la psiquiatra o psiquiatra que mejor se adapte a tus necesidades.</p>
+        <div id="doctors-list" class="cards-grid"></div>
+      </div>
+    </section>
+
+    <section id="fees" class="section section-alt">
+      <div class="container">
+        <h2 data-i18n="fees.title">Honorarios y servicios</h2>
+        <p data-i18n="fees.description">Consulta los servicios disponibles, tarifas y modalidades ofrecidas por cada profesional.</p>
+
+        <div class="fees-controls">
+          <label for="doctor-select" data-i18n="fees.selectDoctor">Selecciona un profesional</label>
+          <select id="doctor-select"></select>
+        </div>
+
+        <div id="services-list" class="services-list"></div>
+
+        <div id="cta-area" class="cta-area" hidden>
+          <div class="cta-area__details">
+            <h3 id="cta-service-title"></h3>
+            <p id="cta-service-prices"></p>
+          </div>
+          <div class="cta-area__actions">
+            <a id="cta-payment" class="primary-btn" target="_blank" rel="noopener" data-i18n="fees.payAndBook">Pagar y agendar</a>
+            <a id="cta-booking" class="secondary-btn" target="_blank" rel="noopener" data-i18n="fees.goToCalendar">Ver horarios</a>
+          </div>
+          <p class="cta-note" id="cta-payment-note"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container">
+        <h2 data-i18n="faq.title">Preguntas frecuentes</h2>
+        <div id="faq-list" class="faq-list"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+      <div class="container contact-section">
+        <div>
+          <h2 data-i18n="contact.title">¿Listo para comenzar?</h2>
+          <p data-i18n="contact.description">Completa una agenda en línea o escríbenos por WhatsApp para coordinar la mejor opción para ti.</p>
+          <button id="contact-cta" class="primary-btn" data-i18n="contact.cta">Agendar con el profesional seleccionado</button>
+          <a id="contact-whatsapp" class="secondary-btn" target="_blank" rel="noopener" data-i18n="contact.whatsapp">Abrir WhatsApp</a>
+        </div>
+        <div class="contact-info">
+          <h3 data-i18n="contact.infoTitle">Información adicional</h3>
+          <ul>
+            <li><span data-i18n="contact.emailLabel">Correo:</span> <a href="mailto:info@psychiatry-care.com">info@psychiatry-care.com</a></li>
+            <li><span data-i18n="contact.paymentLabel">Pagos seguros con:</span> Stripe</li>
+            <li><span data-i18n="contact.meetLabel">Modalidad:</span> Google Meet o Zoom</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p>&copy; <span id="current-year"></span> Psychiatry Care</p>
+      <div class="footer-links">
+        <a href="legal/privacy.html" data-i18n="footer.privacy">Política de privacidad</a>
+        <a href="legal/terms.html" data-i18n="footer.terms">Términos y condiciones</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
