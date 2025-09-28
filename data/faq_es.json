@@ -1,0 +1,20 @@
+{
+  "faq": [
+    {
+      "question": "¿Cómo funcionan las consultas online?",
+      "answer": "Las sesiones se realizan por videollamada en Zoom o Google Meet. Tras agendar recibirás un enlace seguro para conectarte desde cualquier dispositivo." 
+    },
+    {
+      "question": "¿Puedo elegir a mi profesional?",
+      "answer": "Sí. Selecciona a la persona que prefieras desde la sección de profesionales y agenda en su calendario disponible." 
+    },
+    {
+      "question": "¿Qué sucede en una emergencia?",
+      "answer": "Este servicio no atiende emergencias. Si tú o alguien cercano está en riesgo, contacta a servicios de urgencia locales de inmediato." 
+    },
+    {
+      "question": "¿Cuáles son los medios de pago?",
+      "answer": "Puedes abonar con tarjeta de crédito o débito a través de Stripe Checkout. PayPal estará disponible próximamente." 
+    }
+  ]
+}
