@@ -1,0 +1,86 @@
+{
+  "doctors": [
+    {
+      "id": "dr-ramirez",
+      "name": "Dra. Camila Ramírez",
+      "image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80",
+      "bio_es": "Psiquiatra con enfoque en adultos, ansiedad y depresión. Trabaja con terapias basadas en evidencia y seguimiento cercano.",
+      "bio_en": "Psychiatrist focused on adults, anxiety, and depression. Provides evidence-based treatments with close follow-up.",
+      "edit_token": "RAMIREZ2024",
+      "services": [
+        {
+          "code": "initial",
+          "label_es": "Consulta inicial (60’)",
+          "label_en": "Initial consult (60’)",
+          "description_es": "Evaluación integral para elaborar un plan terapéutico personalizado.",
+          "description_en": "Comprehensive assessment to design a tailored treatment plan.",
+          "usd": 120,
+          "eur": 110
+        },
+        {
+          "code": "followup",
+          "label_es": "Seguimiento (40’)",
+          "label_en": "Follow-up (40’)",
+          "description_es": "Revisión de evolución, ajustes de medicación y recomendaciones.",
+          "description_en": "Progress review, medication adjustments, and guidance.",
+          "usd": 80,
+          "eur": 75
+        }
+      ],
+      "calendly": "https://calendly.com/dra-ramirez/consulta",
+      "meet_provider": "google",
+      "whatsapp": "https://wa.me/5491100000000",
+      "payment_links": {
+        "initial": {
+          "stripe": "https://buy.stripe.com/test_7sI8xd4W59Mw3qMfYY",
+          "paypal": "https://www.paypal.com/checkoutnow?token=INIT123"
+        },
+        "followup": {
+          "stripe": "https://buy.stripe.com/test_8wM6qx5Qz8tM2I03cc",
+          "paypal": "https://www.paypal.com/checkoutnow?token=FOLL456"
+        }
+      }
+    },
+    {
+      "id": "dr-velasco",
+      "name": "Dr. Martín Velasco",
+      "image": "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=800&q=80",
+      "bio_es": "Especialista en psiquiatría infantojuvenil, trastornos del neurodesarrollo y psicoeducación familiar.",
+      "bio_en": "Child and adolescent psychiatrist focused on neurodevelopmental disorders and family psychoeducation.",
+      "edit_token": "VELASCO2024",
+      "services": [
+        {
+          "code": "initial",
+          "label_es": "Evaluación inicial (75’)",
+          "label_en": "Initial evaluation (75’)",
+          "description_es": "Entrevista diagnóstica con tutores y diseño de plan de abordaje integral.",
+          "description_en": "Diagnostic interview with caregivers and collaborative intervention planning.",
+          "usd": 150,
+          "eur": 135
+        },
+        {
+          "code": "followup",
+          "label_es": "Seguimiento clínico (45’)",
+          "label_en": "Clinical follow-up (45’)",
+          "description_es": "Monitoreo de respuesta terapéutica, coordinación escolar y ajustes.",
+          "description_en": "Therapeutic monitoring, school coordination, and adjustments.",
+          "usd": 95,
+          "eur": 90
+        }
+      ],
+      "calendly": "https://calendly.com/dr-velasco/agenda",
+      "meet_provider": "zoom",
+      "whatsapp": "https://wa.me/5491199999999",
+      "payment_links": {
+        "initial": {
+          "stripe": "https://buy.stripe.com/test_9AQ8xd6PzaiY4Ao14b",
+          "paypal": "https://www.paypal.com/checkoutnow?token=INIT789"
+        },
+        "followup": {
+          "stripe": "https://buy.stripe.com/test_dR6aIlaHReoE6KUbIK",
+          "paypal": "https://www.paypal.com/checkoutnow?token=FOLL987"
+        }
+      }
+    }
+  ]
+}

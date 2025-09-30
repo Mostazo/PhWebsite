@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Psic Psiquiatría Online</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-analytics-endpoint="" data-stripe-enabled="true" data-paypal-enabled="false">
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">Psychiatry Care</div>
+      <nav class="main-nav">
+        <a href="#services" data-i18n="menu.services">Servicios</a>
+        <a href="#fees" data-i18n="menu.honorarios">Honorarios</a>
+        <a href="#contact" data-i18n="menu.contacto">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-selector">
+          <button type="button" class="lang-btn" data-lang="es">ES</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button type="button" id="doctor-portal-btn" class="tertiary-btn" data-i18n="header.doctorPortal">Portal profesionales</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 data-i18n="hero.title">Consultas de psiquiatría online</h1>
+          <p data-i18n="hero.subtitle">Atención personalizada con psiquiatras certificados para acompañarte en cada etapa.</p>
+          <div class="hero-actions">
+            <button id="hero-cta" class="primary-btn" data-i18n="hero.cta">Agendar consulta</button>
+            <a id="hero-whatsapp" class="secondary-btn" href="#contact" data-i18n="hero.secondaryCta">Escribir por WhatsApp</a>
+          </div>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1527137342181-19aab11a8ee8?auto=format&fit=crop&w=900&q=80" alt="Consulta en línea" />
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2 data-i18n="services.title">Profesionales disponibles</h2>
+        <p data-i18n="services.description">Selecciona la psiquiatra o psiquiatra que mejor se adapte a tus necesidades.</p>
+        <div id="doctors-list" class="cards-grid"></div>
+      </div>
+    </section>
+
+    <section id="fees" class="section section-alt">
+      <div class="container">
+        <h2 data-i18n="fees.title">Honorarios y servicios</h2>
+        <p data-i18n="fees.description">Consulta los servicios disponibles, tarifas y modalidades ofrecidas por cada profesional.</p>
+
+        <div class="fees-controls">
+          <label for="doctor-select" data-i18n="fees.selectDoctor">Selecciona un profesional</label>
+          <select id="doctor-select"></select>
+        </div>
+
+        <div id="services-list" class="services-list"></div>
+
+        <div id="cta-area" class="cta-area" hidden>
+          <div class="cta-area__details">
+            <h3 id="cta-service-title"></h3>
+            <p id="cta-service-prices"></p>
+          </div>
+          <div class="cta-area__actions">
+            <a id="cta-payment" class="primary-btn" target="_blank" rel="noopener" data-i18n="fees.payAndBook">Pagar y agendar</a>
+            <a id="cta-booking" class="secondary-btn" target="_blank" rel="noopener" data-i18n="fees.goToCalendar">Ver horarios</a>
+          </div>
+          <p class="cta-note" id="cta-payment-note"></p>
+          <p class="legal-disclaimer" id="cta-legal-disclaimer" data-i18n="legal.disclaimerShort">Los servicios psicológicos ofrecidos se brindan en modalidad online por profesionales matriculados en la República Argentina conforme a su normativa. Ver aviso legal completo al pie.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container">
+        <h2 data-i18n="faq.title">Preguntas frecuentes</h2>
+        <div id="faq-list" class="faq-list"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+      <div class="container contact-section">
+        <div>
+          <h2 data-i18n="contact.title">¿Listo para comenzar?</h2>
+          <p data-i18n="contact.description">Completa una agenda en línea o escríbenos por WhatsApp para coordinar la mejor opción para ti.</p>
+          <button id="contact-cta" class="primary-btn" data-i18n="contact.cta">Agendar con el profesional seleccionado</button>
+          <a id="contact-whatsapp" class="secondary-btn" target="_blank" rel="noopener" data-i18n="contact.whatsapp">Abrir WhatsApp</a>
+        </div>
+        <div class="contact-info">
+          <h3 data-i18n="contact.infoTitle">Información adicional</h3>
+          <ul>
+            <li><span data-i18n="contact.emailLabel">Correo:</span> <a href="mailto:info@psychiatry-care.com">info@psychiatry-care.com</a></li>
+            <li><span data-i18n="contact.paymentLabel">Pagos seguros con:</span> Stripe</li>
+            <li><span data-i18n="contact.meetLabel">Modalidad:</span> Google Meet o Zoom</li>
+          </ul>
+        </div>
+        <div class="contact-disclaimer">
+          <p class="legal-disclaimer" data-i18n="legal.disclaimerShort">Los servicios psicológicos ofrecidos se brindan en modalidad online por profesionales matriculados en la República Argentina conforme a su normativa. Ver aviso legal completo al pie.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p>&copy; <span id="current-year"></span> Psychiatry Care</p>
+      <div class="footer-links">
+        <a href="legal/privacy.html" data-i18n="footer.privacy">Política de privacidad</a>
+        <a href="legal/terms.html" data-i18n="footer.terms">Términos y condiciones</a>
+      </div>
+      <p class="legal-disclaimer" data-i18n="legal.disclaimerFull">Aviso legal y consentimiento informado: los servicios psicológicos ofrecidos en esta página son brindados por profesionales matriculados en la República Argentina, conforme a la legislación y normas éticas vigentes en dicho país. Si te encuentras en otro país (incluido España), ten en cuenta que la atención se desarrolla de manera remota bajo normativa argentina. El/la profesional no ejerce como colegiado/a en España ni en otros países, sino como profesional habilitado en Argentina. Los servicios tienen carácter de orientación y acompañamiento y no sustituyen la atención presencial local si fuera necesaria. No se emitirán informes, certificados o peritajes con validez legal fuera de Argentina. Al utilizar esta plataforma declaras haber leído y comprendido este aviso y brindas tu consentimiento informado para recibir acompañamiento psicológico desde Argentina.</p>
+    </div>
+  </footer>
+
+  <div id="doctor-portal-modal" class="modal" hidden>
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="doctor-portal-title">
+      <button type="button" class="modal-close" id="doctor-portal-close" aria-label="Cerrar">×</button>
+      <section id="doctor-login-section" class="modal-section">
+        <h2 id="doctor-portal-title" data-i18n="admin.loginTitle">Acceso para profesionales</h2>
+        <p data-i18n="admin.loginDescription">Usa tu código privado para actualizar tu perfil, tarifas y enlaces de contacto.</p>
+        <form id="doctor-login-form" class="modal-form">
+          <label class="form-field">
+            <span data-i18n="admin.loginDoctorLabel">Profesional</span>
+            <select id="doctor-login-select"></select>
+          </label>
+          <label class="form-field">
+            <span data-i18n="admin.loginAccessCodeLabel">Código de acceso</span>
+            <input type="password" id="doctor-login-code" data-i18n="admin.loginAccessCodePlaceholder" required />
+          </label>
+          <p class="form-hint" data-i18n="admin.loginHelp">Si no recuerdas tu código, contacta al administrador del sitio.</p>
+          <div class="form-actions">
+            <button type="submit" class="primary-btn" data-i18n="admin.loginButton">Ingresar</button>
+          </div>
+          <p id="doctor-login-error" class="form-error" role="alert"></p>
+        </form>
+      </section>
+
+      <section id="doctor-edit-section" class="modal-section" hidden>
+        <h2 data-i18n="admin.editTitle">Editar perfil profesional</h2>
+        <p class="form-success" id="doctor-save-status" role="status"></p>
+        <form id="doctor-edit-form" class="modal-form">
+          <label class="form-field">
+            <span data-i18n="admin.fieldName">Nombre</span>
+            <input type="text" id="doctor-name" required />
+          </label>
+          <label class="form-field">
+            <span data-i18n="admin.fieldBioEs">Bio (ES)</span>
+            <textarea id="doctor-bio-es" rows="3"></textarea>
+          </label>
+          <label class="form-field">
+            <span data-i18n="admin.fieldBioEn">Bio (EN)</span>
+            <textarea id="doctor-bio-en" rows="3"></textarea>
+          </label>
+          <label class="form-field">
+            <span data-i18n="admin.fieldCalendly">Enlace de agenda</span>
+            <input type="url" id="doctor-calendly" required />
+          </label>
+          <label class="form-field">
+            <span data-i18n="admin.fieldWhatsapp">Enlace de WhatsApp</span>
+            <input type="url" id="doctor-whatsapp" required />
+          </label>
+
+          <div class="form-field image-field">
+            <span data-i18n="admin.fieldImage">Foto de perfil</span>
+            <div class="image-uploader">
+              <img id="doctor-image-preview" src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=800&q=80" alt="Foto profesional" />
+              <div class="image-actions">
+                <label class="secondary-btn file-btn">
+                  <span data-i18n="admin.imageUpload">Subir imagen</span>
+                  <input type="file" id="doctor-image-input" accept="image/*" hidden />
+                </label>
+                <button type="button" class="link-btn" id="doctor-image-remove" data-i18n="admin.imageRemove">Quitar imagen</button>
+              </div>
+              <p class="form-hint" data-i18n="admin.imageHelp">La foto se almacena de forma privada en este navegador. Para compartirla con el equipo, envía el archivo original.</p>
+            </div>
+          </div>
+
+          <h3 class="form-subtitle" data-i18n="admin.servicesTitle">Servicios y tarifas</h3>
+          <div id="doctor-edit-services" class="services-form"></div>
+
+          <div class="form-actions">
+            <button type="submit" class="primary-btn" data-i18n="admin.saveButton">Guardar cambios</button>
+            <button type="button" class="secondary-btn" id="doctor-logout-btn" data-i18n="admin.logoutButton">Cerrar sesión</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "faq": [
+    {
+      "question": "How do online appointments work?",
+      "answer": "Sessions are hosted via Zoom or Google Meet. Once booked you will receive a secure link to join from any device." 
+    },
+    {
+      "question": "Can I choose my psychiatrist?",
+      "answer": "Yes. Select the professional you prefer from the professionals section and book in their available calendar." 
+    },
+    {
+      "question": "What if this is an emergency?",
+      "answer": "This service does not provide emergency care. If you or someone near you is at risk, contact local emergency services immediately." 
+    },
+    {
+      "question": "What payment methods are available?",
+      "answer": "You can pay with credit or debit cards through Stripe Checkout. PayPal will be available soon." 
+    }
+  ]
+}
